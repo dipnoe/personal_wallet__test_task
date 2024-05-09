@@ -2,7 +2,7 @@ import json
 import os
 from typing import Any
 
-from note import Note
+from src.note import Note
 
 
 def check_file(file: str) -> bool:

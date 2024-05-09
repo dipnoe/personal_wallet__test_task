@@ -1,8 +1,8 @@
-from account import Account
-from consts import CATEGORIES, FIELDS
-from note import Note
-from note_manager import NoteManager
+from src.account import Account
+from src.note import Note
+from src.note_manager import NoteManager
 
+from consts import CATEGORIES, FIELDS
 
 def print_notes(note):
     for key, value in note.items():

@@ -1,9 +1,9 @@
 from consts import FILE
-from note_manager import NoteManager
-from interaction_handlers import (add_new_note_interaction,
-                                  update_note_interaction,
-                                  display_balance_interaction,
-                                  search_notes_interaction)
+from src.note_manager import NoteManager
+from src.interaction_handlers import (add_new_note_interaction,
+                                      update_note_interaction,
+                                      display_balance_interaction,
+                                      search_notes_interaction)
 
 actions = {
     '1': add_new_note_interaction,
@@ -34,6 +34,8 @@ def main():
                 action(note_manager)
             except ValueError:
                 print("Введено некорректное значение.")
+            except TypeError:
+                print("Создайте первую запись.")
             continue
 
         print('Такого у нас нет. Попробуйте выбрать другое действие.')
